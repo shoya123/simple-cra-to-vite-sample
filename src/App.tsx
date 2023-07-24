@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("count", count);
+  }, [count]);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <button onClick={() => setCount((prev) => prev + 1)}>increment</button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
