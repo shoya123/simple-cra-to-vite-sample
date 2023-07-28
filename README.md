@@ -4,11 +4,12 @@
 
 参考: https://www.robinwieruch.de/vite-create-react-app/
 
+
 ## step
 
 1. CRA をインストール
-2. Vite をインストールし、CRA をアンインストール （この時点で問題なくブラウザ上で動作させる）
-3. svg などの asset の型定義を CRA からコピー
+2. Viteをインストールし、CRAをアンインストール （ブラウザ上では問題なく動作する状態）
+3. svg など asset の型を定義（CRA から拝借）
 4. ESLint を導入
 
 ## package の説明
