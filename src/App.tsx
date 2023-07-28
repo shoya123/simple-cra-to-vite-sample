@@ -9,7 +9,10 @@ function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    // 環境変数を開発サーバーとjestで参照できるかを確認
     console.log("count", count, process.env.REACT_APP_HELLO);
+
+    // ES Modulesのライブラリをjestで動かせるか確認
     arrayMoveMutable(array, 0, -1);
   }, [count]);
 
