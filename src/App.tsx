@@ -9,7 +9,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    console.log("count", count);
+    console.log("count", count, process.env.REACT_APP_HELLO);
     arrayMoveMutable(array, 0, -1);
   }, [count]);
 
@@ -17,6 +17,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Counter />
+        <div>{process.env.REACT_APP_HELLO}</div>
         <img src={logo} className="App-logo" alt="logo" />
         <button onClick={() => setCount((prev) => prev + 1)}>increment</button>
         <p>
